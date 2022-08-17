@@ -3,68 +3,186 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Font -->
-
-    <!-- CSS Href -->
-    <link rel="stylesheet" href="style.css" />
-    <title>Yani Cathering</title>
+    <title>Bootstrap demo</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- My icon -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-light">
-      <div class="container-fluid">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top bg-dark"
+    >
+      <div class="container">
         <a class="navbar-brand" href="#"
           ><img
-            src="img/Print Logo Transparent PNG.png"
-            alt="logo"
-            width="100"
-            height="100"
+            src="img/Restaurant_Premium_Food_Logo_Template-removebg-preview.png"
+            alt="Logo"
         /></a>
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ms-auto me-5 mt-3">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            <a class="nav-link active" href="#">Menu Tumpeng</a>
-            <a class="nav-link active" href="#">Menu Nasi Kotak</a>
-            <a class="nav-link active" href="#">Bantuan</a>
-            <a class="" href="#"
-              ><button type="button" class="btn btn-outline-warning md-2">
-                LOGIN
-              </button></a
-            >
-          </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Menu Tumpeng</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Menu Nasi Box</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="" href="#"
+                ><button class="tombol btn btn-outline-warning">
+                  Login
+                </button></a
+              >
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
-    <!-- Akhir navbar -->
+    <!-- Akhir Navbar -->
 
     <!-- Jumbotron -->
-    <div class="jumbotron p-5 mb-4 bg-light rounded-3">
-      <div class="container-fluid py-5">
-        <h1 class="display-3 fw-bold">Masakan Khas Indonesia</h1>
-        <h4 class="display-6">Murah, Praktis dan Higenis</h4>
-      </div>
-    </div>
-
+    <section class="jumbotron text-center">
+      <h1 class="display-4">
+        Menyajikan Makanan Dengan <br />
+        Sepenuh <span>Hati</span>
+      </h1>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,128L40,138.7C80,149,160,171,240,192C320,213,400,235,480,224C560,213,640,171,720,154.7C800,139,880,149,960,149.3C1040,149,1120,139,1200,117.3C1280,96,1360,64,1400,48L1440,32L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
     <!-- Akhir Jumbotron -->
 
+    <!-- Menu Favorit -->
+    <section id="menu_fav">
+      <div class="container">
+        <div class="row text-center mb-4">
+          <div class="col">
+            <h2>Menu Favorit Kami</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img
+                src="img/Tumpeng_besar_1.jpeg"
+                class="card-img-top"
+                alt="menu_1"
+                style="height: 15rem"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Nasi Box 1</h5>
+                <p class="card-text">
+                  Nasi putih serta ayam lengkuas, ikan suwir dan daun paya.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img
+                src="img/Cathering2.jpeg"
+                class="card-img-top"
+                alt="menu_2"
+                style="height: auto"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Nasi Box 2</h5>
+                <p class="card-text">
+                  Nasi kuning serta ayam lengkuas, tempe goreng, telur balado
+                  dan mie goreng.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img
+                src="img/tumpeng_mini_1.jpeg"
+                class="card-img-top"
+                alt="menu_2"
+                style="height: 15rem"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Tumpeng Mini</h5>
+                <p class="card-text">
+                  Nasi kuning serta ayam lengkuas, tempe goreng, telur balado
+                  dan mie goreng.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#e2edff"
+          fill-opacity="1"
+          d="M0,224L40,197.3C80,171,160,117,240,122.7C320,128,400,192,480,213.3C560,235,640,213,720,202.7C800,192,880,192,960,170.7C1040,149,1120,107,1200,85.3C1280,64,1360,64,1400,64L1440,64L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- Akhir menu -->
+
+    <!-- About -->
+    <section id="About" class="about">
+      <div class="container about">
+        <div class="row text-center mb-2">
+          <div class="col">
+            <h2 class="text-head">Sedikit Tentang Kami</h2>
+          </div>
+        </div>
+        <h6 class="text-body">Kami berdiri sejak tahun 2014, banyak sekali pahit manis usaha cathering rumahan kami rasakan. Dari pengalaman itulah kita belajar cara meningkatkan dan mengembangkan kualitas produk dan pelayanan kami.</h6>
+     
+    </section>
+    <!-- Akhir About -->
+
+    <!-- Footer -->
+    <section class="footer">
+    <footer class="bg-black text-white text-center pb-3">
+      <p class="text">
+        Contact :
+        <br>
+        📞 : 0858-9949-6182 (WA Only)
+      </p>
+      <p class="text">
+        Created with ❤ by 
+        <a href="https://www.instagram.com/fabs_197/" class="text-white fw-bold"
+          >Fabian Juliansyah Cahyadi</a
+        >
+      </p>
+      <br>
+    </footer>
+  </section>
+    <!-- Akhir Footer -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
