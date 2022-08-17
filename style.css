@@ -1,54 +1,104 @@
+/* Navbar */
+.navbar-brand img {
+  width: 100px;
+  height: 100px;
+}
+
+/* Jumbotron */
 .jumbotron {
+  padding-top: 12rem;
+  background-color: #e2edff;
   background-image: url(img/pngtree-overlooking-minimalist-cartoon-hand-drawn-catering-gourmet-background-picture-image_1016736.jpg);
   background-size: cover;
-  height: 500px; /* You must set a specified height */
-  background-position: center; /* Center the image */
+  margin-top: 75px;
+  text-align: center;
+  height: auto;
 }
 
-.display-3 {
-  color: #f0ad4e;
-  text-align: center;
-  margin-top: 100px;
+.jumbotron .display-4 {
+  margin-top: 10px;
+  font-weight: normal;
+  color: white;
+  text-shadow: 2px 2px black;
+  font-size: 38px;
+  margin-bottom: 35px;
+}
+
+.jumbotron .display-4 span {
   font-weight: bold;
-  -webkit-text-stroke: 2px black;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  color: red;
 }
 
-.display-6 {
-  font-family: Comic Sans MS, serif;
-  font-size: 26px;
-  letter-spacing: 0.8px;
-  word-spacing: 2px;
-  color: #000000;
-  font-weight: 400;
-  text-decoration: none;
-  font-style: normal;
-  font-variant: normal;
-  text-transform: none;
+/* Card */
+.card-title {
   text-align: center;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  font-family: "Times New Roman", Times, serif;
+}
+
+.card-text {
+  text-align: center;
+  color: gray;
+}
+
+/* About */
+.about {
+  background-color: #e2edff;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.about .text-head {
+  margin-top: auto;
+  font-weight: normal;
+  color: black;
+  text-shadow: 1px 1px white;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.about .text-body {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: lighter;
+  font-weight: 400;
+  background-color: #e2edff;
+  margin-bottom: 2px;
+}
+
+/* Footer */
+
+/* Utility */
+.tombol {
+  text-transform: uppercase;
+  border-radius: 40px;
 }
 
 /* Desktop Version */
 @media (min-width: 992px) {
   .nav-link {
-    font-family: Titillium Web;
-    font-size: 20px;
     text-transform: uppercase;
-    margin-right: 5px;
+    margin-right: 20px;
   }
 
   .nav-link:hover::after {
     content: "";
     display: block;
-    border-bottom: 3px solid #f0ad4e;
+    border-bottom: 3px solid salmon;
     width: 50%;
     margin: auto;
     padding-bottom: 5px;
-    margin-bottom: -8px;
+    margin-top: -8px;
   }
 
   .jumbotron {
-    margin-top: -30px;
+    padding-top: 20rem;
+    margin-top: -75px;
+    height: auto;
+  }
+
+  .jumbotron .display-4 {
+    font-size: 60px;
+  }
+
+  .about {
   }
 }
