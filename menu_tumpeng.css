@@ -7,7 +7,7 @@
 /* Jumbotron */
 .jumbotron {
   padding-top: 8rem;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   background-image: url(img/bg-heading.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -20,6 +20,31 @@
 
 .jumbotron p {
   color: gray;
+}
+
+/* Display Tumpeng */
+.display-tumpeng {
+  text-align: center;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.display-tumpeng h4 {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.display-tumpeng h5 {
+  font-family: sans-serif;
+  color: #eb7d23;
+}
+
+.display-tumpeng h6 {
+  color: gray;
+}
+
+/* Footer */
+.footer h5 {
+  margin-top: 3px;
 }
 
 /* Utility */
@@ -43,5 +68,9 @@
     margin: auto;
     padding-bottom: 5px;
     margin-top: -8px;
+  }
+
+  .footer h5 {
+    margin-top: 5px;
   }
 }
