@@ -61,16 +61,12 @@ require 'validation.php';
               <a class="nav-link active" href="#footer">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="me-4" href="login_form.php"
+              <a class="" href="login_form.php"
                 ><button class="tombol btn btn-outline-warning" type="submit" name="login">
                   Login
                 </button></a
               >
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-floating mb-1 btn-outline-light" href="#">
-                <i class="bi bi-cart"></i></a>
-            </li>
+
           </ul>
         </div>
       </div>

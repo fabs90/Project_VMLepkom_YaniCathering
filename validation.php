@@ -1,6 +1,7 @@
 <?php
 require 'connection.php';
-
+$errors = array();
+$success = array();
 // Start session
 session_start();
 
