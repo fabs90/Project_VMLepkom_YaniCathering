@@ -1,0 +1,64 @@
+/* Navbar */
+.navbar-brand img {
+  width: 100px;
+  height: 100px;
+}
+
+/* Jumbotron */
+.jumbotron {
+  padding-top: 8rem;
+  padding-bottom: 20px;
+  background-image: url(img/bg-heading.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.jumbotron h1 {
+  font-family: "Times New Roman", Times, serif;
+  color: #eb7d23;
+}
+
+.jumbotron p {
+  color: gray;
+}
+
+/* Button Checkout */
+.checkout {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  border-radius: 40px;
+  text-transform: uppercase;
+}
+
+/* Footer */
+.footer h5 {
+  margin-top: 3px;
+}
+
+/* Utility */
+.tombol {
+  text-transform: uppercase;
+  border-radius: 40px;
+}
+
+/* Desktop Version */
+@media (min-width: 992px) {
+  .nav-link {
+    text-transform: uppercase;
+    margin-right: 20px;
+  }
+
+  .nav-link:hover::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid salmon;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 5px;
+    margin-top: -8px;
+  }
+
+  .footer h5 {
+    margin-top: 5px;
+  }
+}
