@@ -58,7 +58,7 @@ if (!isset($_SESSION['username'])) {
               <a class="nav-link active" href="#home">Menu Tumpeng</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">Menu Nasi Box</a>
+              <a class="nav-link active" href="home_nasibox.php">Menu Nasi Box</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="#footer">Contact</a>
@@ -71,7 +71,7 @@ if (!isset($_SESSION['username'])) {
               >
             </li>
             <li class="nav-item">
-              <a class="btn btn-floating mb-1 btn-outline-light" href="#">
+              <a class="btn btn-floating mb-1 btn-outline-light" href="cart.php">
                 <i class="bi bi-cart"></i></a>
             </li>
           </ul>
