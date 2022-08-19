@@ -1,6 +1,5 @@
 <?php
 // Start session
-require 'connection.php';
 require 'validation.php';
 
 // Cek apakah var session username sudah di set, kl belom balik ke landing page
@@ -66,7 +65,7 @@ if (!isset($_SESSION['username'])) {
             </li>
             <li class="nav-item">
               <a class="me-4" href="logout.php"
-                ><button class="tombol btn btn-outline-warning" type="submit" name="login">
+                ><button class="tombol btn btn-outline-warning" type="submit" name="logout">
                   Logout
                 </button></a
               >
@@ -101,8 +100,11 @@ if (!isset($_SESSION['username'])) {
 
             <?php
 $result = mysqli_query($conn, "SELECT * FROM tumpeng_product");
+
 while ($row = mysqli_fetch_assoc($result)) {?>
-<form action='home.php?id=<?$row['id']?>' method="post">
+<form action='home.php?id=<?=$row['id']?>' method="post">
+
+            <!-- Menampilkan Data Barang -->
             <div class="card mb-3">
               <img
                 src="img/<?=$row['image']?>"
@@ -116,6 +118,11 @@ while ($row = mysqli_fetch_assoc($result)) {?>
                   desc..
                 </h6>
                 <h5 class="card-text">Rp. <?=number_format($row['price'], 3)?></h5>
+
+                 <!-- Mengambil Data Spesifik suatu barang kemudian dikirim ke validation lewat input hidden -->
+                <input type="hidden" name="nama" value="<?=$row['name']?>" >
+                <input type="hidden" name="harga" value="<?=$row['price']?>" >
+                <input type="number" name="jumlah_barang" value="1" class="form-control mb-2">
                 <a href=""><button type="submit" name="kirim_tumpeng" class="btn btn-warning tombol">Pesan</button></a>
               </div>
             </div>
