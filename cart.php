@@ -120,9 +120,9 @@ if (!empty($_SESSION["cart"])) {
         <tr>
             <td>" . $value['id'] . "</td>
             <td>" . $value['nama'] . "</td>
-            <td>" . $value['harga'] . "</td>
+            <td>Rp. " . $value['harga'] . "</td>
             <td>" . $value['jumlah_barang'] . "</td>
-            <td>" . number_format($value['jumlah_barang'] * $value['harga'], 2) . "</td>
+            <td>Rp. " . number_format($value['jumlah_barang'] * $value['harga'], 3) . "</td>
             <td>
                 <a href='cart.php?action=remove&id=" . $value['id'] . "'>
                 <button class='btn btn-danger btn-block'>Remove</button>
@@ -138,12 +138,7 @@ if (!empty($_SESSION["cart"])) {
     <tr>
         <td colspan='3'></td>
         <td></b>Total Price</b></td>
-        <td>" . number_format($total, 2) . "</td>
-        <td>
-        <a href='clear.php'>
-        <button class='btn btn-warning btn-block'>Clear All</button>
-        </a>
-        </td>
+        <td>Rp. " . number_format($total, 3) . "</td>
     </tr>
 
     ";
