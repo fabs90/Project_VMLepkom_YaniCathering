@@ -36,15 +36,66 @@ if (isset($_POST['submit'])) {
         }
 
         // Cek apakah username dan password form sama dengan yg di db
-        if ($username === $dbUsername && $password === $dbPass) {
+        if ($username === $dbUsername && password_verify($password, $dbPass)) {
             // Set $_SESSION['username]
             $_SESSION['username'] = $username;
 
             // Heading ke halaman home
             header("Location:home.php");
+        } else {
+            echo "<script type='text/javascript'> alert('Wrong username/Password!'); document.location.href='login_form.php';</script>";
+            exit();
         }
     } else {
         echo "<script type='text/javascript'> alert('Wrong username/Password!'); document.location.href='login_form.php';</script>";
+        exit();
+    }
+}
+
+// (Validasi Register)
+if (isset($_POST['kirim_regist'])) {
+    // Mengambil input data dari form regist
+    $username = mysqli_real_escape_string($conn, $_POST['username']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+
+    // Cek apakah sudah ada data yg sama dengan data yg diinput user
+    $result = mysqli_query($conn, "SELECT * FROM login where username = '$username' and email = '$email'");
+
+    // Cek ada berapa row yg affected
+    $num_row = mysqli_num_rows($result);
+
+    // Kalo tidak ada data yg sama
+    if ($num_row == 0) {
+
+        // Ubah password yg diinput user jadi hash
+        $password = mysqli_real_escape_string($conn, password_hash($_POST["password"], PASSWORD_DEFAULT));
+
+        // sql ambil semua data sesuai password
+        $sql = mysqli_query($conn, "SELECT * FROM login where password = '$password'");
+
+        // Cek apakah sudah ada data dgn password seperti yg di regist
+        $num_row_pass = mysqli_num_rows($sql);
+
+        // Jika tidak ada password yg sama baru insert data
+        if ($num_row_pass == 0) {
+
+            // Query sql insert ke db
+            $sql = mysqli_query($conn, "INSERT INTO login(username, password, email) VALUES ('$username','$password', '$email')");
+
+            if ($sql) {
+                echo "<script type='text/javascript'> alert('Account Successfully created'); document.location.href='register.php';</script>";
+                exit();
+            } else {
+                echo "<script type='text/javascript'> alert('Failed to create data'); document.location.href='register.php';</script>";
+                exit();
+            }
+        } else {
+            echo "<script type='text/javascript'> alert('Data already exist!'); document.location.href='register.php';</script>";
+            exit();
+        }
+
+    } else {
+        echo "<script type='text/javascript'> alert('Username/Email already exist!'); document.location.href='register.php';</script>";
         exit();
     }
 }
