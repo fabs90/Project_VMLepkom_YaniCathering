@@ -84,7 +84,7 @@ require 'validation.php';
         <input id="user-password" class="form-content" type="password" name="password" required />
         <div class="form-border"></div>
         <input id="submit-btn" type="submit" name="submit" value="LOGIN" />
-        <a href="#" id="signup">Don't have account yet?</a>
+        <a href="register.php" id="signup">Don't have account yet?</a>
       </form>
     </div>
   </div>
