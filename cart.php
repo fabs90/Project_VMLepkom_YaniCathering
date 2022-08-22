@@ -115,23 +115,23 @@ $output .= "
 
 ";
 if (!empty($_SESSION["cart"])) {
-    foreach ($_SESSION["cart"] as $key => $value) {
+    foreach ($_SESSION["cart"] as $key) {
         $output .= "
         <tr>
-            <td>" . $value['id'] . "</td>
-            <td>" . $value['nama'] . "</td>
-            <td>Rp. " . $value['harga'] . "</td>
-            <td>" . $value['jumlah_barang'] . "</td>
-            <td>Rp. " . number_format($value['jumlah_barang'] * $value['harga'], 3) . "</td>
+            <td>" . $key['id'] . "</td>
+            <td>" . $key['nama'] . "</td>
+            <td>Rp. " . $key['harga'] . "</td>
+            <td>" . $key['jumlah_barang'] . "</td>
+            <td>Rp. " . number_format($key['jumlah_barang'] * $key['harga'], 3) . "</td>
             <td>
-                <a href='cart.php?action=remove&id=" . $value['id'] . "'>
+                <a href='cart.php?action=remove&id=" . $key['id'] . "'>
                 <button class='btn btn-danger btn-block'>Remove</button>
                 </a>
             </td>
         </tr>
         ";
 
-        $total += $value['jumlah_barang'] * $value['harga'];
+        $total += $key['jumlah_barang'] * $key['harga'];
     }
 
     $output .= "
