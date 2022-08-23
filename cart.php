@@ -174,7 +174,7 @@ echo $output;
                 <!-- Github -->
             <a class="btn btn-outline-light" href="https://github.com/fabs90" role="button"
               ><i class="bi bi-github"></i></a>
-              <!-- Google -->
+              <!-- Facebook -->
             <a class="btn btn-outline-light" href="https://m.facebook.com/fabian.juliansyah" role="button"
               ><i class="bi bi-facebook"></i></a>
             </div>
