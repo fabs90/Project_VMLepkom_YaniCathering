@@ -120,7 +120,7 @@ if (!empty($_SESSION["cart"])) {
         <tr>
             <td>" . $key['id'] . "</td>
             <td>" . $key['nama'] . "</td>
-            <td>Rp. " . $key['harga'] . "</td>
+            <td>Rp. " . number_format($key['harga'], 3) . "</td>
             <td>" . $key['jumlah_barang'] . "</td>
             <td>Rp. " . number_format($key['jumlah_barang'] * $key['harga'], 3) . "</td>
             <td>
