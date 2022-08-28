@@ -106,11 +106,11 @@ $output .= "
     <table class='table table-bordered  table-striped'>
     <tr>
         <th>ID</th>
-        <th>Item Name</th>
-        <th>Item Price</th>
-        <th>Item Quantity</th>
-        <th>Total Price</th>
-        <th>Action</th>
+        <th>Nama</th>
+        <th>Harga</th>
+        <th>Jumlah</th>
+        <th>Total Harga</th>
+        <th>Aksi</th>
     </tr>
 
 ";

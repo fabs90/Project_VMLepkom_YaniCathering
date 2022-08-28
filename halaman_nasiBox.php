@@ -100,7 +100,7 @@ while ($row = mysqli_fetch_assoc($result)) {?>
                 src="img/<?=$row['image']?>"
                 class="card-img-top"
                 alt="menu_2"
-                style="height: auto"
+                style="height: 350px; width:100%;"
               />
               <div class="card-body">
                 <h4 class="card-title"><?=$row['name']?></h4>
