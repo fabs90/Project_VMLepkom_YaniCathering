@@ -153,7 +153,8 @@ echo $output;
 
 <!-- Button Checkout -->
 <div class="container-fluid text-center">
-<button class="checkout btn btn-warning">Checkout</button>
+<a class="checkout" href="checkout.php">
+  <button class="checkout btn btn-warning" type="submit" name="checkout">checkout</button></a>
 </div>
 <!-- Akhir button checkout -->
 
