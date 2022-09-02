@@ -80,6 +80,14 @@ if (!isset($_SESSION['username'])) {
     </nav>
     <!-- Akhir Navbar -->
 
+    <!-- Fill Form  -->
+  <form action="cart.php" method="post">
+
+  </form>
+    <!-- Akhir Fill Form -->
+
+
+
     <!-- Jumbotron -->
     <section class="jumbotron" id="home">
         <div class="container-fluid text-center pt-10">
@@ -99,13 +107,13 @@ if (!isset($_SESSION['username'])) {
   <?php
 // Deklrasi variabel total = 0
 $total = 0;
-
+$no = 1;
 $output = "";
 
 $output .= "
     <table class='table table-bordered  table-striped'>
     <tr>
-        <th>ID</th>
+        <th>No</th>
         <th>Nama</th>
         <th>Harga</th>
         <th>Jumlah</th>
@@ -118,7 +126,7 @@ if (!empty($_SESSION["cart"])) {
     foreach ($_SESSION["cart"] as $key) {
         $output .= "
         <tr>
-            <td>" . $key['id'] . "</td>
+            <td>" . $no . "</td>
             <td>" . $key['nama'] . "</td>
             <td>Rp. " . number_format($key['harga'], 3) . "</td>
             <td>" . $key['jumlah_barang'] . "</td>
@@ -131,6 +139,7 @@ if (!empty($_SESSION["cart"])) {
         </tr>
         ";
 
+        $no++;
         $total += $key['jumlah_barang'] * $key['harga'];
     }
 
@@ -167,7 +176,7 @@ echo $output;
           <div class="row">
             <!--Grid column-->
             <div class="col-lg-6 col-md-12 mb-4 mb-md-0 ">
-              <h5 class="text-uppercase">Connected with us :</h5>
+              <h5 class="text-uppercase">Terhubung Dengan Kami :</h5>
               <!-- Instagram -->
               <a class="btn btn-floating m-1 btn-outline-light" href="https://www.instagram.com/fabianjc.jpeg/" role="button"
               ><i class="bi bi-instagram"></i
@@ -183,7 +192,7 @@ echo $output;
 
             <!--Grid column-->
             <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-              <h5 class="text-uppercase">Contact : </h5>
+              <h5 class="text-uppercase">Pemesanan Dapat Juga Dilakukan Melalui :</h5>
 
               <p>
                 📞 : 085899496182 (WA only)
