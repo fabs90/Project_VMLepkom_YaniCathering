@@ -39,6 +39,7 @@
 .tombol {
   text-transform: uppercase;
   border-radius: 40px;
+  margin-top: 2px;
 }
 
 /* Desktop Version */
