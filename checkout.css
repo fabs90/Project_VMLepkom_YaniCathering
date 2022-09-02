@@ -1,0 +1,47 @@
+/* Navbar */
+.navbar-brand img {
+  width: 100px;
+  height: 100px;
+}
+
+/* Card */
+.underline_title {
+  background: -webkit-linear-gradient(right, #fc575e, #f7b42c);
+  height: 2px;
+  margin: auto;
+  width: 25%;
+}
+
+/* Footer */
+.footer h5 {
+  margin-top: 3px;
+}
+
+/* Utility */
+.tombol {
+  text-transform: uppercase;
+  border-radius: 40px;
+  margin-top: 2px;
+}
+
+/* Desktop Version */
+@media (min-width: 992px) {
+  .nav-link {
+    text-transform: uppercase;
+    margin-right: 20px;
+  }
+
+  .nav-link:hover::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid salmon;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 5px;
+    margin-top: -8px;
+  }
+
+  .footer h5 {
+    margin-top: 5px;
+  }
+}
