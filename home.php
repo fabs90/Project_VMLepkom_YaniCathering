@@ -115,7 +115,7 @@ while ($row = mysqli_fetch_assoc($result)) {?>
               <div class="card-body">
                 <h4 class="card-title"><?=$row['name']?></h4>
                 <h6 class="card-text">
-                  desc..
+                  <?=$row['description']?>
                 </h6>
                 <h5 class="card-text">Rp. <?=number_format($row['price'], 3)?></h5>
 
@@ -145,7 +145,7 @@ while ($row = mysqli_fetch_assoc($result)) {?>
           <div class="row">
             <!--Grid column-->
             <div class="col-lg-6 col-md-12 mb-4 mb-md-0 ">
-              <h5 class="text-uppercase">Connected with us :</h5>
+              <h5 class="text-uppercase">Terhubung Dengan Kami :</h5>
               <!-- Instagram -->
               <a class="btn btn-floating m-1 btn-outline-light" href="https://www.instagram.com/fabianjc.jpeg/" role="button"
               ><i class="bi bi-instagram"></i
@@ -161,7 +161,7 @@ while ($row = mysqli_fetch_assoc($result)) {?>
 
             <!--Grid column-->
             <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-              <h5 class="text-uppercase">Contact : </h5>
+              <h5 class="text-uppercase">Pemesanan Dapat Juga Dilakukan Melalui :</h5>
 
               <p>
                 📞 : 085899496182 (WA only)
