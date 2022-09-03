@@ -60,6 +60,13 @@ require 'validation.php';
             <li class="nav-item">
               <a class="nav-link active" href="#footer">Contact</a>
             </li>
+            <li class="nav-item">
+              <a class="" href="login_form.php"
+                ><button class="tombol btn btn-outline-warning" type="submit" name="login">
+                  Login
+                </button></a
+              >
+            </li>
           </ul>
         </div>
       </div>
@@ -95,7 +102,7 @@ require 'validation.php';
   </div>
 
   <!-- Footer -->
-  <section id="footer" class="footer">
+<section id="footer" class="footer">
       <footer class="bg-black text-white text-center pb-3">
         <!-- Grid container -->
         <div class="container p-4">
@@ -103,23 +110,23 @@ require 'validation.php';
           <div class="row">
             <!--Grid column-->
             <div class="col-lg-6 col-md-12 mb-4 mb-md-0 ">
-              <h5 class="text-uppercase">Connected with us :</h5>
+              <h5 class="text-uppercase">Terhubung Dengan Kami :</h5>
               <!-- Instagram -->
               <a class="btn btn-floating m-1 btn-outline-light" href="https://www.instagram.com/fabianjc.jpeg/" role="button"
               ><i class="bi bi-instagram"></i
             ></a>
                 <!-- Github -->
-            <a class="btn btn-outline-light" href="https://github.com/fabs90" role="button"
+            <a class="btn btn-outline-light m-1" href="https://github.com/fabs90" role="button"
               ><i class="bi bi-github"></i></a>
-              <!-- Google -->
-            <a class="btn btn-outline-light" href="https://m.facebook.com/fabian.juliansyah" role="button"
+              <!-- Facebook -->
+            <a class="btn btn-outline-light m-1" href="https://m.facebook.com/fabian.juliansyah" role="button"
               ><i class="bi bi-facebook"></i></a>
             </div>
             <!--Grid column-->
 
             <!--Grid column-->
             <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-              <h5 class="text-uppercase">Contact : </h5>
+              <h5 class="text-uppercase">Pemesanan Dapat Juga Dilakukan Melalui :</h5>
 
               <p>
                 📞 : 085899496182 (WA only)
@@ -145,6 +152,7 @@ require 'validation.php';
       </footer>
   </section>
     <!-- Akhir Footer -->
+
 </body>
   <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
