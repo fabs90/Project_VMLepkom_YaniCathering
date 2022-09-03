@@ -177,8 +177,31 @@ if (isset($_GET["action"])) {
             if ($value['id'] == $id) {
                 // Menghapus dgn cara unset key yg sesuai sama id
                 unset($_SESSION['cart'][$key]);
-                $success['delete'] = "Sucessfully Delete";
             }
         }
     }
+}
+
+// (Validasi Tombol Checkout)
+// Cek apakah tombol checkout sudah di klik
+if (isset($_POST['kirim_data'])) {
+    // Ambil data dari input user sekalian anti sql injection
+    $nama = mysqli_real_escape_string($conn, $_POST['nama']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $nomor = $_POST['nomor'];
+    $alamat = mysqli_real_escape_string($conn, $_POST['alamat']);
+    $catatan = mysqli_real_escape_string($conn, $_POST['catatan']);
+    $cara_bayar = mysqli_real_escape_string($conn, $_POST['bayar']);
+
+    // Sql query
+    $query = "INSERT INTO data_pembeli(nama, email, no_telepon, alamat, catatan, bayar) VALUES ('$nama','$email','$nomor','$alamat','$catatan','$cara_bayar')";
+
+    $sql = mysqli_query($conn, $query);
+
+    if ($sql) {
+        $success['kirim'] = "Data Has Been Sent, We'll Contact You Further";
+    } else {
+        $errors['kirim'] = "Data Failed To Be Sent, Resend";
+    }
+
 }
