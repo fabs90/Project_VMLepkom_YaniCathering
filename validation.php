@@ -182,7 +182,17 @@ if (isset($_GET["action"])) {
     }
 }
 
-// (Validasi Tombol Checkout)
+// (Validasi tombol checkout)
+if (isset($_POST['checkout'])) {
+    // Jika array session cart tdk kosong pindah halaman
+    if ($_SESSION['cart']) {
+        header("Location:checkout.php");
+    } else {
+        echo "<script type='text/javascript'> alert('Cart is empty!'); document.location.href='cart.php';</script>";
+    }
+}
+
+// (Validasi Tombol Submit di halaman checkout)
 // Cek apakah tombol checkout sudah di klik
 if (isset($_POST['kirim_data'])) {
     // Ambil data dari input user sekalian anti sql injection
