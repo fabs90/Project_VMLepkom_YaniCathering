@@ -102,68 +102,73 @@ if (!isset($_SESSION['username'])) {
     <!-- Akhir jumbotron -->
 
 <!-- Display Cart -->
-<div class="table-responsive-sm">
-  <table class="table">
-  <?php
+<div class="container">
+    <div class="table-responsive-sm">
+      <table class="table">
+      <?php
 // Deklrasi variabel total = 0
 $total = 0;
 $no = 1;
 $output = "";
 
 $output .= "
-    <table class='table table-bordered  table-striped'>
-    <tr>
-        <th>No</th>
-        <th>Nama</th>
-        <th>Harga</th>
-        <th>Jumlah</th>
-        <th>Total Harga</th>
-        <th>Aksi</th>
-    </tr>
+        <table class='table table-bordered  table-striped'>
+        <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Harga</th>
+            <th>Jumlah</th>
+            <th>Total Harga</th>
+            <th>Aksi</th>
+        </tr>
 
-";
+    ";
 if (!empty($_SESSION["cart"])) {
     foreach ($_SESSION["cart"] as $key) {
         $output .= "
-        <tr>
-            <td>" . $no . "</td>
-            <td>" . $key['nama'] . "</td>
-            <td>Rp. " . number_format($key['harga'], 3) . "</td>
-            <td>" . $key['jumlah_barang'] . "</td>
-            <td>Rp. " . number_format($key['jumlah_barang'] * $key['harga'], 3) . "</td>
-            <td>
-                <a href='cart.php?action=remove&id=" . $key['id'] . "'>
-                <button class='btn btn-danger btn-block'>Remove</button>
-                </a>
-            </td>
-        </tr>
-        ";
+            <tr>
+                <td>" . $no . "</td>
+                <td>" . $key['nama'] . "</td>
+                <td>Rp. " . number_format($key['harga'], 3) . "</td>
+                <td>" . $key['jumlah_barang'] . "</td>
+                <td>Rp. " . number_format($key['jumlah_barang'] * $key['harga'], 3) . "</td>
+                <td>
+                    <a href='cart.php?action=remove&id=" . $key['id'] . "'>
+                    <button class='btn btn-danger btn-block'>Remove</button>
+                    </a>
+                </td>
+            </tr>
+            ";
 
         $no++;
         $total += $key['jumlah_barang'] * $key['harga'];
     }
 
     $output .= "
-    <tr>
-        <td colspan='3'></td>
-        <td></b>Total Price</b></td>
-        <td>Rp. " . number_format($total, 3) . "</td>
-    </tr>
+        <tr>
+            <td colspan='3'></td>
+            <td></b>Total Price</b></td>
+            <td>Rp. " . number_format($total, 3) . "</td>
+        </tr>
 
-    ";
+        ";
 }
 
 echo $output;
 ?>
-  </table>
+      </table>
+    </div>
 </div>
 <!-- Akhir Display Cart -->
 
 
 <!-- Button Checkout -->
-<div class="container-fluid text-center">
-<a class="checkout" href="checkout.php">
-  <button class="checkout btn btn-warning" type="submit" name="checkout">checkout</button></a>
+<div class="container text-center">
+  <form action="cart.php" method="post">
+    <a class="checkout" href="checkout.php">
+      <button class="checkout btn btn-warning" type="submit" name="checkout">checkout</button>
+    </a>
+  </form>
 </div>
 <!-- Akhir button checkout -->
 
