@@ -184,10 +184,8 @@ if (isset($_GET["action"])) {
 
 // (Validasi tombol checkout)
 if (isset($_POST['checkout'])) {
-    // Jika array session cart tdk kosong pindah halaman
-    if ($_SESSION['cart']) {
-        header("Location:checkout.php");
-    } else {
+    // Jika array session cart kosong gaboleh pindah halaman
+    if (!$_SESSION['cart']) {
         echo "<script type='text/javascript'> alert('Cart is empty!'); document.location.href='cart.php';</script>";
     }
 }
