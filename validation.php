@@ -187,6 +187,8 @@ if (isset($_POST['checkout'])) {
     // Jika array session cart kosong gaboleh pindah halaman
     if (!$_SESSION['cart']) {
         echo "<script type='text/javascript'> alert('Cart is empty!'); document.location.href='cart.php';</script>";
+    } else {
+        header("Location:checkout.php");
     }
 }
 
