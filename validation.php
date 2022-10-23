@@ -83,7 +83,7 @@ if (isset($_POST['kirim_regist'])) {
             $sql = mysqli_query($conn, "INSERT INTO login(username, password, email) VALUES ('$username','$password', '$email')");
 
             if ($sql) {
-                echo "<script type='text/javascript'> alert('Account Successfully created'); document.location.href='register.php';</script>";
+                echo "<script type='text/javascript'> alert('Account Successfully created'); document.location.href='login_form.php';</script>";
                 exit();
             } else {
                 echo "<script type='text/javascript'> alert('Failed to create data'); document.location.href='register.php';</script>";
