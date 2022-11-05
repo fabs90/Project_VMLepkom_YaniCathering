@@ -230,6 +230,7 @@ function tanganiError($level, $message, $file, $line)
     return true;
 }
 
+// Mengatasi error function
 register_shutdown_function(function () {
     if (error_get_last()) {
         # ambil error terakhir
