@@ -7,6 +7,8 @@ if (!isset($_SESSION['username'])) {
     header("Location:login_form.php");
 }
 
+ob_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -192,3 +194,7 @@ while ($row = mysqli_fetch_assoc($result)) {?>
       crossorigin="anonymous"
     ></script>
 </html>
+
+<?php
+ob_end_flush();
+?>
